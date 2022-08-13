@@ -8,7 +8,7 @@ print([[
 |    / |     ||_   _| /  /  |     || |___  /  /  
 |    \ |  O  ||     |/   \_ |  _  ||     |/   \_ 
 |  .  \|     ||  |  |\     ||  |  ||     |\     |
-|__|\_||_____||__|__| \____||__|__||_____| \____|          
+|__|\_||_____||__|__| \____||__|__||_____| \____| 
 
 	   https://github.com/z4xi/rbxcalc
 ]])
@@ -34,6 +34,7 @@ local One = Instance.new("TextButton")
 local Two = Instance.new("TextButton")
 local Three = Instance.new("TextButton")
 local Go = Instance.new("TextButton")
+local Close = Instance.new("TextButton")
 
 --Properties:
 
@@ -58,15 +59,15 @@ Output.Parent = Base
 Output.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 Output.BorderSizePixel = 0
 Output.Position = UDim2.new(0.033692684, 0, 0.0322031379, 0)
-Output.Size = UDim2.new(0.904081643, 8, 0.158000007, 8)
+Output.Size = UDim2.new(0.812675834, 8, 0.158000007, 8)
 
 Text.Name = "Text"
 Text.Parent = Output
 Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Text.BackgroundTransparency = 1.000
 Text.BorderSizePixel = 0
-Text.Position = UDim2.new(0.0355561264, 0, 0.078651689, 0)
-Text.Size = UDim2.new(0, 316, 0, 72)
+Text.Position = UDim2.new(0.0355561711, 0, 0.0786516964, 0)
+Text.Size = UDim2.new(0, 277, 0, 72)
 Text.Font = Enum.Font.SourceSans
 Text.Text = "Waiting..."
 Text.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -209,9 +210,22 @@ Go.TextScaled = true
 Go.TextSize = 14.000
 Go.TextWrapped = true
 
+Close.Name = "Close"
+Close.Parent = Base
+Close.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Close.BackgroundTransparency = 1.000
+Close.Position = UDim2.new(0.868715107, 0, 0.03125, 0)
+Close.Size = UDim2.new(0, 46, 0, 50)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(255, 0, 0)
+Close.TextScaled = true
+Close.TextSize = 14.000
+Close.TextWrapped = true
+
 -- Scripts:
 
-local function ISLQ_fake_script() -- Base.Calculator 
+local function VQFS_fake_script() -- Base.Calculator 
 	local script = Instance.new('Script', Base)
 
 	-- main / global vars
@@ -227,6 +241,14 @@ local function ISLQ_fake_script() -- Base.Calculator
 	local add2 = nil
 	
 	------ buttons ------
+	
+	-- close
+	
+	local closebtn = script.Parent.Close
+	
+	closebtn.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent:Destroy()
+	end)
 	
 	-- top row
 	
@@ -328,10 +350,12 @@ local function ISLQ_fake_script() -- Base.Calculator
 		add1 = nil
 		add2 = nil
 	end)
-	
-	
-	------ draggable ------
-	
+end
+coroutine.wrap(VQFS_fake_script)()
+local function YPPR_fake_script() -- Calc.Draggable 
+	local script = Instance.new('LocalScript', Calc)
+
+	----- draggable ------
 	
 	local UserInputService = game:GetService("UserInputService")
 	
@@ -373,4 +397,4 @@ local function ISLQ_fake_script() -- Base.Calculator
 		end
 	end)
 end
-coroutine.wrap(ISLQ_fake_script)()
+coroutine.wrap(YPPR_fake_script)()

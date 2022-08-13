@@ -9,7 +9,7 @@ print([[
 |    \ |  O  ||     |/   \_ |  _  ||     |/   \_ 
 |  .  \|     ||  |  |\     ||  |  ||     |\     |
 |__|\_||_____||__|__| \____||__|__||_____| \____| 
-
+	   
 	   https://github.com/z4xi/rbxcalc
 ]])
 
@@ -34,7 +34,19 @@ local One = Instance.new("TextButton")
 local Two = Instance.new("TextButton")
 local Three = Instance.new("TextButton")
 local Go = Instance.new("TextButton")
+local Settings = Instance.new("TextButton")
 local Close = Instance.new("TextButton")
+local Settings_2 = Instance.new("Frame")
+local Title = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local Close_2 = Instance.new("TextButton")
+local Mode = Instance.new("TextLabel")
+local Buttons_2 = Instance.new("Folder")
+local AddMode = Instance.new("TextButton")
+local MultiplyMode = Instance.new("TextButton")
+local SubtractMode = Instance.new("TextButton")
+local DivideMode = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
 
 --Properties:
 
@@ -59,15 +71,15 @@ Output.Parent = Base
 Output.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 Output.BorderSizePixel = 0
 Output.Position = UDim2.new(0.033692684, 0, 0.0322031379, 0)
-Output.Size = UDim2.new(0.812675834, 8, 0.158000007, 8)
+Output.Size = UDim2.new(0.776363015, 8, 0.158000007, 8)
 
 Text.Name = "Text"
 Text.Parent = Output
 Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Text.BackgroundTransparency = 1.000
 Text.BorderSizePixel = 0
-Text.Position = UDim2.new(0.0355561711, 0, 0.0786516964, 0)
-Text.Size = UDim2.new(0, 277, 0, 72)
+Text.Position = UDim2.new(0.0355562083, 0, 0.0786516964, 0)
+Text.Size = UDim2.new(0, 265, 0, 72)
 Text.Font = Enum.Font.SourceSans
 Text.Text = "Waiting..."
 Text.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -201,8 +213,8 @@ Three.TextWrapped = true
 Go.Name = "Go"
 Go.Parent = Buttons
 Go.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
-Go.Position = UDim2.new(0.033692684, 0, 0.828701496, 0)
-Go.Size = UDim2.new(0, 330, 0, 73)
+Go.Position = UDim2.new(0.033692684, 0, 0.834560871, 0)
+Go.Size = UDim2.new(0, 331, 0, 73)
 Go.Font = Enum.Font.SourceSans
 Go.Text = "Go!"
 Go.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -210,12 +222,25 @@ Go.TextScaled = true
 Go.TextSize = 14.000
 Go.TextWrapped = true
 
+Settings.Name = "Settings"
+Settings.Parent = Buttons
+Settings.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+Settings.BackgroundTransparency = 1.000
+Settings.Position = UDim2.new(0.835368633, 0, 0.115234375, 0)
+Settings.Size = UDim2.new(0, 57, 0, 46)
+Settings.Font = Enum.Font.SourceSans
+Settings.Text = ">>"
+Settings.TextColor3 = Color3.fromRGB(255, 255, 255)
+Settings.TextScaled = true
+Settings.TextSize = 14.000
+Settings.TextWrapped = true
+
 Close.Name = "Close"
-Close.Parent = Base
+Close.Parent = Buttons
 Close.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
 Close.BackgroundTransparency = 1.000
-Close.Position = UDim2.new(0.868715107, 0, 0.03125, 0)
-Close.Size = UDim2.new(0, 46, 0, 50)
+Close.Position = UDim2.new(0.835834801, 0, 0.03125, 0)
+Close.Size = UDim2.new(0, 57, 0, 43)
 Close.Font = Enum.Font.SourceSans
 Close.Text = "X"
 Close.TextColor3 = Color3.fromRGB(255, 0, 0)
@@ -223,12 +248,134 @@ Close.TextScaled = true
 Close.TextSize = 14.000
 Close.TextWrapped = true
 
+Settings_2.Name = "Settings"
+Settings_2.Parent = Calc
+Settings_2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Settings_2.BorderSizePixel = 0
+Settings_2.Position = UDim2.new(1.39312077, 0, 0.29686895, 0)
+Settings_2.Size = UDim2.new(0, 227, 0, 273)
+
+Title.Name = "Title"
+Title.Parent = Settings_2
+Title.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+Title.Position = UDim2.new(0.00670472533, 0, 0, 0)
+Title.Size = UDim2.new(0, 224, 0, 40)
+
+TextLabel.Parent = Title
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(0, 224, 0, 40)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Settings"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+Close_2.Name = "Close"
+Close_2.Parent = Title
+Close_2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Close_2.BackgroundTransparency = 1.000
+Close_2.Position = UDim2.new(0.835834801, 0, 0, 0)
+Close_2.Size = UDim2.new(0, 36, 0, 40)
+Close_2.Font = Enum.Font.SourceSans
+Close_2.Text = "X"
+Close_2.TextColor3 = Color3.fromRGB(255, 0, 0)
+Close_2.TextScaled = true
+Close_2.TextSize = 14.000
+Close_2.TextWrapped = true
+
+Mode.Name = "Mode"
+Mode.Parent = Settings_2
+Mode.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+Mode.Position = UDim2.new(0.0352422893, 0, 0.201465204, 0)
+Mode.Size = UDim2.new(0, 211, 0, 50)
+Mode.Visible = false
+Mode.Font = Enum.Font.SourceSans
+Mode.Text = "Current Mode: Add"
+Mode.TextColor3 = Color3.fromRGB(255, 255, 255)
+Mode.TextScaled = true
+Mode.TextSize = 14.000
+Mode.TextWrapped = true
+
+Buttons_2.Name = "Buttons"
+Buttons_2.Parent = Settings_2
+
+AddMode.Name = "AddMode"
+AddMode.Parent = Buttons_2
+AddMode.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+AddMode.Position = UDim2.new(0.0352422893, 0, 0.406593412, 0)
+AddMode.Size = UDim2.new(0, 103, 0, 50)
+AddMode.Visible = false
+AddMode.Font = Enum.Font.SourceSans
+AddMode.Text = "Add"
+AddMode.TextColor3 = Color3.fromRGB(255, 255, 255)
+AddMode.TextScaled = true
+AddMode.TextSize = 14.000
+AddMode.TextWrapped = true
+
+MultiplyMode.Name = "MultiplyMode"
+MultiplyMode.Parent = Buttons_2
+MultiplyMode.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+MultiplyMode.Position = UDim2.new(0.0352422893, 0, 0.615384638, 0)
+MultiplyMode.Size = UDim2.new(0, 103, 0, 50)
+MultiplyMode.Visible = false
+MultiplyMode.Font = Enum.Font.SourceSans
+MultiplyMode.Text = "Multiply"
+MultiplyMode.TextColor3 = Color3.fromRGB(255, 255, 255)
+MultiplyMode.TextScaled = true
+MultiplyMode.TextSize = 14.000
+MultiplyMode.TextWrapped = true
+
+SubtractMode.Name = "SubtractMode"
+SubtractMode.Parent = Buttons_2
+SubtractMode.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+SubtractMode.Position = UDim2.new(0.51101321, 0, 0.406593442, 0)
+SubtractMode.Size = UDim2.new(0, 103, 0, 50)
+SubtractMode.Visible = false
+SubtractMode.Font = Enum.Font.SourceSans
+SubtractMode.Text = "Subtract"
+SubtractMode.TextColor3 = Color3.fromRGB(255, 255, 255)
+SubtractMode.TextScaled = true
+SubtractMode.TextSize = 14.000
+SubtractMode.TextWrapped = true
+
+DivideMode.Name = "DivideMode"
+DivideMode.Parent = Buttons_2
+DivideMode.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+DivideMode.Position = UDim2.new(0.51101321, 0, 0.615384638, 0)
+DivideMode.Size = UDim2.new(0, 103, 0, 50)
+DivideMode.Visible = false
+DivideMode.Font = Enum.Font.SourceSans
+DivideMode.Text = "Divide"
+DivideMode.TextColor3 = Color3.fromRGB(255, 255, 255)
+DivideMode.TextScaled = true
+DivideMode.TextSize = 14.000
+DivideMode.TextWrapped = true
+
+TextLabel_2.Parent = Settings_2
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.0572687238, 0, 0.172161177, 0)
+TextLabel_2.Size = UDim2.new(0, 200, 0, 212)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Coming Soon!"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
 -- Scripts:
 
-local function VQFS_fake_script() -- Base.Calculator 
+local function FYRTXO_fake_script() -- Base.Calculator 
 	local script = Instance.new('Script', Base)
 
 	-- main / global vars
+	
+	-- _G.mode = "add"
+	
+	local calculator = script.Parent.Parent
 	
 	local btns = script.Parent.Buttons
 	local toprow = btns.Top
@@ -237,14 +384,14 @@ local function VQFS_fake_script() -- Base.Calculator
 	
 	local output = script.Parent.Output.Text
 	
-	local add1 = nil
-	local add2 = nil
+	local num1 = nil
+	local num2 = nil
 	
 	------ buttons ------
 	
 	-- close
 	
-	local closebtn = script.Parent.Close
+	local closebtn = btns.Close
 	
 	closebtn.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent:Destroy()
@@ -257,26 +404,26 @@ local function VQFS_fake_script() -- Base.Calculator
 	local three = toprow.Three
 	
 	one.MouseButton1Click:Connect(function()
-		if add1 then 
-			add2 = one.text
+		if num1 then 
+			num2 = one.text
 		else
-			add1 = one.Text
+			num1 = one.Text
 		end
 	end)
 	
 	two.MouseButton1Click:Connect(function()
-		if add1 then 
-			add2 = two.text
+		if num1 then 
+			num2 = two.text
 		else
-			add1 = two.Text
+			num1 = two.Text
 		end
 	end)
 	
 	three.MouseButton1Click:Connect(function()
-		if add1 then 
-			add2 = three.text
+		if num1 then 
+			num2 = three.text
 		else
-			add1 = three.Text
+			num1 = three.Text
 		end
 	end)
 	
@@ -287,26 +434,26 @@ local function VQFS_fake_script() -- Base.Calculator
 	local six = midrow.Six
 	
 	four.MouseButton1Click:Connect(function()
-		if add1 then 
-			add2 = four.text
+		if num1 then 
+			num2 = four.text
 		else
-			add1 = four.Text
+			num1 = four.Text
 		end
 	end)
 	
 	five.MouseButton1Click:Connect(function()
-		if add1 then 
-			add2 = five.text
+		if num1 then 
+			num2 = five.text
 		else
-			add1 = five.Text
+			num1 = five.Text
 		end
 	end)
 	
 	six.MouseButton1Click:Connect(function()
-		if add1 then 
-			add2 = six.text
+		if num1 then 
+			num2 = six.text
 		else
-			add1 = six.Text
+			num1 = six.Text
 		end
 	end)
 	
@@ -317,42 +464,61 @@ local function VQFS_fake_script() -- Base.Calculator
 	local nine = bottomrow.Nine
 	
 	seven.MouseButton1Click:Connect(function()
-		if add1 then 
-			add2 = seven.text
+		if num1 then 
+			num2 = seven.text
 		else
-			add1 = seven.Text
+			num1 = seven.Text
 		end
 	end)
 	
 	eight.MouseButton1Click:Connect(function()
-		if add1 then 
-			add2 = eight.text
+		if num1 then 
+			num2 = eight.text
 		else
-			add1 = eight.Text
+			num1 = eight.Text
 		end
 	end)
 	
 	nine.MouseButton1Click:Connect(function()
-		if add1 then 
-			add2 = nine.text
+		if num1 then 
+			num2 = nine.text
 		else
-			add1 = nine.Text
+			num1 = nine.Text
 		end
 	end)
 	
 	-- calculate!!!!!!!!!!!!
 	
-	local go = script.Parent.Buttons.Go
+	local go = btns.Go
 	
 	go.MouseButton1Click:Connect(function()
-		local result = add1 + add2
+		local result = "Waiting..."
+		
+		--if _G.mode == "add" then
+		result = tostring(num1 + num2)
+		--elseif _G.mode == "subtract" then
+		--	result = tostring(num1 - num2)
+		--elseif _G.mode == "multiply" then
+		--	result = tostring(num1 * num2)
+		--elseif _G.mode == "divide" then
+		--	result = tostring(num1 / num2)
+		--end
+		
 		output.Text = result
-		add1 = nil
-		add2 = nil
+		num1 = nil
+		num2 = nil
+	end)
+	
+	-- settings button
+	
+	local settingsbtn = btns.Settings
+	
+	settingsbtn.MouseButton1Click:Connect(function()
+		calculator.Settings.Visible = true
 	end)
 end
-coroutine.wrap(VQFS_fake_script)()
-local function YPPR_fake_script() -- Calc.Draggable 
+coroutine.wrap(FYRTXO_fake_script)()
+local function VTLGNOK_fake_script() -- Calc.Draggable 
 	local script = Instance.new('LocalScript', Calc)
 
 	----- draggable ------
@@ -397,4 +563,53 @@ local function YPPR_fake_script() -- Calc.Draggable
 		end
 	end)
 end
-coroutine.wrap(YPPR_fake_script)()
+coroutine.wrap(VTLGNOK_fake_script)()
+local function JLUY_fake_script() -- Settings_2.Settings 
+	local script = Instance.new('LocalScript', Settings_2)
+
+	-- main / global vars
+	
+	local gui = script.Parent
+	
+	local buttons = gui.Buttons
+	local modetext = gui.Mode.Text
+	
+	local addbtn = buttons.AddMode
+	local subtractbtn = buttons.SubtractMode
+	local multiplybtn = buttons.MultiplyMode
+	local dividebtn = buttons.DivideMode
+	local closebtn = gui.Title.Close
+	
+	------ button functions ------
+	
+	-- close btn
+	
+	closebtn.MouseButton1Click:Connect(function()
+		gui.Visible = false
+	end)
+	
+	addbtn.MouseButton1Click:Connect(function()
+		_G.mode = "add"
+		print("set mode to " .. _G.mode)
+		modetext = "Current Mode: " .. _G.mode
+	end)
+	
+	subtractbtn.MouseButton1Click:Connect(function()
+		_G.mode = "subtract"
+		print("set mode to " .. _G.mode)
+		modetext = "Current Mode: " .. _G.mode
+	end)
+	
+	multiplybtn.MouseButton1Click:Connect(function()
+		_G.mode = "multiply"
+		print("set mode to " .. _G.mode)
+		modetext = "Current Mode: " .. _G.mode
+	end)
+	
+	dividebtn.MouseButton1Click:Connect(function()
+		_G.mode = "divide"
+		print("set mode to " .. _G.mode)
+		modetext = "Current Mode: " .. _G.mode
+	end)
+end
+coroutine.wrap(JLUY_fake_script)()

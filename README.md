@@ -12,7 +12,9 @@ no ones gonna use this shit but,
 try to credit me when you use this.
 idrc if you don't, but just try
 
-### mode guide
+### mode guide (WIP)
+(NOT IMPLEMENTED YET)
+
 this script uses "modes" because I couldn't fit some stuff into the main frame so I'll explain all of them here.
 
 - mode 1: add

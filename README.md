@@ -14,7 +14,7 @@ idrc if you don't, but just try
 ## mode guide
 this script uses "modes", so I'll explain all of them here.
 
-mode 1: add
-mode 2: multiply
+- mode 1: add
+- mode 2: multiply
 
 more modes coming soon (I'm lazy)

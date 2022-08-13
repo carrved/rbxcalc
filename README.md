@@ -1,24 +1,18 @@
- ____   ____   __ __     __   ____  _         __ 
-|    \ |    \ |  |  |   /  ] /    || |       /  ]
-|  D  )|  o  )|  |  |  /  / |  o  || |      /  / 
-|    / |     ||_   _| /  /  |     || |___  /  /  
-|    \ |  O  ||     |/   \_ |  _  ||     |/   \_ 
-|  .  \|     ||  |  |\     ||  |  ||     |\     |
-|__|\_||_____||__|__| \____||__|__||_____| \____| 
+# rbxcalc
 
 calculator script for lego gamers
 
-## loadstring
+### loadstring
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/z4xi/rbxcalc/main/main.lua"))()
 ```
 
-## credit!!
+### credit!!
 no ones gonna use this shit but,
 try to credit me when you use this.
 idrc if you don't, but just try
 
-## mode guide
+### mode guide
 this script uses "modes" because I couldn't fit some stuff into the main frame so I'll explain all of them here.
 
 - mode 1: add

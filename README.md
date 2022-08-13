@@ -12,9 +12,11 @@ try to credit me when you use this.
 idrc if you don't, but just try
 
 ## mode guide
-this script uses "modes", so I'll explain all of them here.
+this script uses "modes" because I couldn't fit some stuff into the main frame so I'll explain all of them here.
 
 - mode 1: add
-- mode 2: multiply
+- mode 2: subtraction
+- mode 3: multiply
+- mode 4: division
 
 more modes coming soon (I'm lazy)
